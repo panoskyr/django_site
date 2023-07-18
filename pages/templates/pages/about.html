@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+
+</head>
+
+
+<body>
+  
+
+{%block header%}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('static/img/about-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About Me</h1>
+            <span class="subheading">This is what I do.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{%endblock%}
+
+{%block maincontent%}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+        <p>Hello, i am Panos an aspiring backend web developer based in Greece.
+        I am currently studying Computer Science and experimenting on my own projects.</p>
+
+        <p>Outside of programming i am an <a href="{% url 'books' %}">avid reader</a> </p>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+{%endblock%}
+
+  <hr>
+
+
+
+</body>
+
+</html>

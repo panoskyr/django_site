@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+
+
+{%block header%}
+  <header class="masthead" style="background-image: url('static/img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Contact Me</h1>
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{%endblock%}
+
+
+
+
+{%block maincontent%}
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+{%if submitted%}
+<p class="success">
+
+Thanks!I'll get back to you as soon as possible.
+
+</p>
+
+{%else%}
+
+  <h1>Contact me</h1>
+	 <form method="POST" novalidate>
+     {%csrf_token%}
+     {%for field in form%}
+
+     <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+     
+        
+      
+          <label>{{field.label_tag}}</label>
+          {{field.errors}}
+    
+          {{field}}
+          <p class="help-block text-danger"></p>
+          </div>
+        </div>
+
+          
+          
+    
+
+  
+           {%endfor%}
+    
+<!--{{ form.as_table}}-->
+
+    
+			
+
+			<tr>
+				<td>&nbsp;</td>
+				<div class="clearfix">
+				    <td class="btn btn-primary float-middle"><input type="submit" name="Send">
+            </td>
+			   </div>
+
+      
+		</div>
+
+	</form>
+
+
+{%endif%}
+
+
+</div>
+</div>
+  
+</div>
+
+
+{%endblock maincontent%}	
